@@ -8,7 +8,13 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-xl font-bold mb-4">CA Firm</h3>
+            <Link to="/" className="block mb-4">
+              <img 
+                src="/images/team/logo.jpg" 
+                alt="V&C Chartered Accountants" 
+                className="h-12"
+              />
+            </Link>
             <p className="text-gray-300">
               Your trusted partner for financial success and growth.
             </p>
@@ -58,7 +64,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-gray-700 mt-12 pt-8 text-center text-gray-300">
-          <p>&copy; {new Date().getFullYear()} CA Firm. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} V&C Chartered Accountants. All rights reserved.</p>
         </div>
       </div>
     </footer>
