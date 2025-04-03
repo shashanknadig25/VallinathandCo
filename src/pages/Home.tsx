@@ -163,10 +163,10 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center">
+      <section className="relative min-h-screen flex items-center w-full overflow-hidden">
         {/* Background Image with Overlay */}
         <div 
-          className="absolute inset-0 z-0"
+          className="absolute inset-0 z-0 w-full"
           style={{
             backgroundImage: 'url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80")',
             backgroundSize: 'cover',
@@ -178,13 +178,13 @@ const Home = () => {
 
         {/* Content Container */}
         <div className="relative z-10 w-full max-w-7xl mx-auto px-4 py-20 md:py-32">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
             {/* Text Content */}
-            <div className="text-white space-y-6">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight animate-fade-up">
+            <div className="text-white space-y-6 w-full">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight animate-fade-up">
                 Your Trusted Financial & Tax Advisory Partner
               </h1>
-              <p className="text-lg md:text-xl text-gray-200 animate-fade-up" style={{ animationDelay: '0.2s' }}>
+              <p className="text-base sm:text-lg md:text-xl text-gray-200 animate-fade-up" style={{ animationDelay: '0.2s' }}>
                 Expert guidance for your business success since 1996
               </p>
               <div className="flex flex-wrap gap-4 animate-fade-up" style={{ animationDelay: '0.3s' }}>
@@ -204,7 +204,7 @@ const Home = () => {
             </div>
 
             {/* Service Carousel */}
-            <div className="relative bg-white/10 backdrop-blur-md rounded-2xl p-8 animate-fade-left" style={{ animationDelay: '0.4s' }}>
+            <div className="relative bg-white/10 backdrop-blur-md rounded-2xl p-6 sm:p-8 w-full animate-fade-left" style={{ animationDelay: '0.4s' }}>
               <div className="overflow-hidden">
                 <div 
                   className="transition-transform duration-500 ease-in-out flex"
@@ -215,15 +215,15 @@ const Home = () => {
                     return (
                       <div key={index} className="w-full flex-shrink-0">
                         <div className="text-white">
-                          <Icon className="w-12 h-12 mb-4" />
-                          <h3 className="text-xl font-bold mb-3">{service.title}</h3>
-                          <p className="text-gray-200 mb-6">{service.description}</p>
+                          <Icon className="w-10 h-10 sm:w-12 sm:h-12 mb-4" />
+                          <h3 className="text-lg sm:text-xl font-bold mb-3">{service.title}</h3>
+                          <p className="text-sm sm:text-base text-gray-200 mb-6">{service.description}</p>
                           <Link
                             to={service.link}
-                            className="inline-flex items-center text-white hover:text-gray-200 transition-colors"
+                            className="inline-flex items-center text-white hover:text-gray-200 transition-colors text-sm sm:text-base"
                           >
                             Learn More
-                            <ChevronRight className="ml-2 w-5 h-5" />
+                            <ChevronRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
                           </Link>
                         </div>
                       </div>
@@ -239,14 +239,14 @@ const Home = () => {
                   className="p-2 rounded-full bg-white/20 hover:bg-white/30 transition-colors"
                   aria-label="Previous service"
                 >
-                  <ChevronLeft className="w-5 h-5 text-white" />
+                  <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
                 </button>
                 <div className="flex gap-2">
                   {services.map((_, index) => (
                     <button
                       key={index}
                       onClick={() => setCurrentServiceIndex(index)}
-                      className={`w-2.5 h-2.5 rounded-full transition-colors ${
+                      className={`w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full transition-colors ${
                         index === currentServiceIndex ? 'bg-white' : 'bg-white/50'
                       }`}
                       aria-label={`Go to service ${index + 1}`}
@@ -258,7 +258,7 @@ const Home = () => {
                   className="p-2 rounded-full bg-white/20 hover:bg-white/30 transition-colors"
                   aria-label="Next service"
                 >
-                  <ChevronRight className="w-5 h-5 text-white" />
+                  <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
                 </button>
               </div>
             </div>
