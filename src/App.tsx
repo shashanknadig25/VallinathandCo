@@ -42,7 +42,7 @@ function App() {
       <div className="min-h-screen bg-white">
         <Navbar />
         <Routes>
-          <Route path="/" element={<Home />} />
+{/*           <Route path="/" element={<Home />} /> */}
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
           <Route path="/services/startup-incorporation" element={<StartupIncorporation />} />
